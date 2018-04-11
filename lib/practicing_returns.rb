@@ -6,10 +6,10 @@ def hello(array)
 
   while i < array.length
     collection << yield(array[i])
-    binding.pry
     i += 1
   end
   collection
+  binding.pry
 end
 
 hello(["Tim", "Tom", "Jim"]) { |name| puts "Hi, #{name}" }
